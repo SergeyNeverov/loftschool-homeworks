@@ -30,7 +30,7 @@ class Chat extends Component {
       <div className="chat">
         <div className="message-list">
           <div className="messages">
-            {this.state.messages.map((message, index) => (
+            {messages.map((message, index) => (
               <Message text={message.text} key={index} />
             ))}
           </div>
