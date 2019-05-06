@@ -1,12 +1,12 @@
 import { searchRequest, searchSuccess, searchFailure } from '../actions';
 
-const firstState = {
+const initialState = {
   loading: false,
   result: [],
   error: null
 };
 
-export default (state = firstState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case searchRequest.toString():
       return {
