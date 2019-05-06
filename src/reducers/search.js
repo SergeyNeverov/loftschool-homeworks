@@ -1,7 +1,7 @@
 import { searchRequest, searchSuccess, searchFailure } from '../actions';
 
 const firstState = {
-  load: false,
+  loading: false,
   result: [],
   error: null
 };
@@ -11,21 +11,21 @@ export default (state = firstState, action) => {
     case searchRequest.toString():
       return {
         ...state,
-        load: true,
+        loading: true,
         result: []
       };
 
     case searchSuccess.toString():
       return {
         ...state,
-        load: false,
+        loading: false,
         result: action.payload
       };
 
     case searchFailure.toString():
       return {
         ...state,
-        load: false,
+        loading: false,
         error: action.payload
       };
 

@@ -15,7 +15,7 @@ class ShowPreview extends Component {
           <NavLink to={`/shows/${id}`} className="t-link">
             {name}
           </NavLink>
-          {image && <img src={image.medium} />}
+          {image && <img src={image.medium} alt={name} />}
         </div>
         <div dangerouslySetInnerHTML={{ __html: summary }} />
       </div>

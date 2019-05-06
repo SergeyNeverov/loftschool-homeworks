@@ -2,7 +2,7 @@
 // Вам нужно определить корневой роут, который будет вести на страницу поиска.
 // Роут шоу должен принимать id в параметрах.
 import React, { Component } from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ShowPage from '../ShowPage';
 import Search from '../Search';
 import './AppRouter.css';

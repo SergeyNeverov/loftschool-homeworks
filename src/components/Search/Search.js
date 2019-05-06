@@ -15,7 +15,6 @@ class Search extends Component {
   };
 
   handleInputChange = e => {
-    e.preventDefault();
     this.setState({
       inputValue: e.target.value
     });
@@ -34,7 +33,7 @@ class Search extends Component {
   render() {
     const { inputValue } = this.state;
     const {
-      search: { loadin, result, error }
+      search: { loading, result, error }
     } = this.props;
 
     return (
@@ -57,7 +56,7 @@ class Search extends Component {
         </form>
 
         <div className={`${styles.searchPanel} t-search-result`}>
-          {loadin && <p>Происходит сетевой запрос</p>}
+          {loading && <p>Происходит сетевой запрос</p>}
           {error && <p>Произошла ошибка: {error.message}</p>}
           {result.length > 0 &&
             result.map(show => (

@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
 import { showsRequest, showsSuccess, showsFailure } from '../actions';
 
-const load = handleActions(
+const loading = handleActions(
   {
     [showsRequest]: () => true,
     [showsSuccess]: () => false,
@@ -29,7 +29,7 @@ const error = handleActions(
 );
 
 export default combineReducers({
-  load,
+  loading,
   showData,
   error
 });
