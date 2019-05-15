@@ -42,6 +42,7 @@ const photos = handleActions(
 
     [fetchPhotosSuccess]: (state, action) => {
       const rover = state[action.payload.name];
+      const photosIsLoading = action.payload.photos;
       return {
         ...state,
         [action.payload.name]: {
@@ -49,7 +50,7 @@ const photos = handleActions(
           [action.payload.sol]: {
             isLoading: false,
             isLoaded: true,
-            photos: []
+            photos: photosIsLoading.photos
           }
         }
       };
